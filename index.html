@@ -2,62 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 15px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
+
 </head>
 <body>
 
     <header>
         <img src="./images/logo.svg" alt="logo">
-        <img src="./images/icon-menu.svg" alt="">
+        <img class="hamburger-menu" src="./images/icon-menu.svg" alt="">
         <nav>
-            <ul>
-                <li>
-                   <button> Features</button>
-                     <img src="./images/icon-arrow-down.svg" alt="flechaAbajo">
-                     <ul>
-                        <li>
-                            <img src="./images/icon-todo.svg" alt="calendar">
-                            <span>Todo List</span>
-                        </li>
-                        <li>
-                            <img src="./images/icon-calendar.svg" alt="calendar icon">
-                            <samp>Calendar</samp>
-                        </li>
-                        <li>
-                            <img src="./images/icon-reminders.svg" alt="remenders icon">
-                            <span>Reminders</span>
-                        </li>
-                        <li>
-                            <img src="./images/icon-planning.svg" alt="planning icon">
-                            <span>Planning</span>
-                        </li>
-                     </ul>
-                </li>
-                <li>
-                    <button>Company </button>
-                    <img src="./images/icon-arrow-down.svg" alt="flecha abajo">
-                
+            <div class="back">
+                <div class="front">
+                    <div class="close-img-container">
+                        <img id="close-btn" src="./images/icon-close-menu.svg" alt="">
+                    </div>
                     <ul>
-                        <li>History</li>
-                        <li>Out Team</li>
-                        <li>Blog</li>
+                        <li>
+                        <button class="submenu-btn"> Features <img src="./images/icon-arrow-down.svg" alt="flechaAbajo"></button>
+                            
+                            <ul class="features-ul">
+                                <li>
+                                    <img src="./images/icon-todo.svg" alt="calendar">
+                                    <span>Todo List</span>
+                                </li>
+                                <li>
+                                    <img src="./images/icon-calendar.svg" alt="calendar icon">
+                                    <samp>Calendar</samp>
+                                </li>
+                                <li>
+                                    <img src="./images/icon-reminders.svg" alt="remenders icon">
+                                    <span>Reminders</span>
+                                </li>
+                                <li>
+                                    <img src="./images/icon-planning.svg" alt="planning icon">
+                                    <span>Planning</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="submenu-btn">Company  <img src="./images/icon-arrow-down.svg" alt="flecha abajo"> </button>
+                            <ul class="company-ul">
+                                <li>History</li>
+                                <li>Out Team</li>
+                                <li>Blog</li>
+                            </ul>
+                        </li>
+                        <li>Careers</li>
+                        <li>About</li>
                     </ul>
-                </li>
-                <li>Careers</li>
-                <li>About</li>
-            </ul>
-            <button>Login</button>
-            <button>Register</button>
+                    <div class="btns-containers">
+                        <button class="login-btn">Login</button>
+                        <button class="register-btn">Register</button>
+                    </div>
+                 </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -66,13 +69,18 @@
             <p>Get your team in sync, no matter your location. Streamline processes, 
                 create team rituals, and watch productivity soar.</p>
                 <button>Learn more</button>
-                <div>
-                    <img src="./images/client-databiz.svg" alt="databiz logo">
-                    <img src="./images/client-audiophile.svg" alt="audiophile logo">
-                    <img src="./images/client-meet.svg" alt="meet logo">
-                    <img src="./images/client-maker.svg" alt="maker logo">
+                <div class="logos-container">
+                    <img class="databiz" src="./images/client-databiz.svg" alt="databiz logo">
+                    <img class="audio" src="./images/client-audiophile.svg" alt="audiophile logo">
+                    <img class="meet" src="./images/client-meet.svg" alt="meet logo">
+                    <img class="maker" src="./images/client-maker.svg" alt="maker logo">
                 </div>
         </section>
+        <picture>
+            <source srcset="./images/image-hero-mobile.png" media="(max-width: 639px)">
+            <source srcset="./images/image-hero-desktop.png" media="(min-width: 640px)">
+            <img class="hero-img" src="./images/image-hero-mobile.png" alt="hero image">
+        </picture>
     </main>  
   
   <div class="attribution"> 
