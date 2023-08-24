@@ -176,6 +176,30 @@ main{
             & .close-img-container{
                 display: none;
             }
+            & .features-ul, .company-ul{
+                background-color: var(--Almost-White);
+                box-shadow: 0px 10px 40px rgb(0,0,0,0.15);
+                border-radius: 10px;
+                width: 153px;
+                height: 160px;
+                position: absolute;
+                padding: 18px 24px;
+                font-size: 0.875px;
+                display: none;
+                top: 55px;
+                & li{
+                    margin-bottom: 16px;
+                    & span{
+                        background-color: blueviolet;
+                    }
+                }
+            }
+            & .features-ul{
+                left: 100px;
+            }
+            &.company-ul{
+                left: 200px;
+            }
             & ul{
                 display: flex;
                 align-items: center;
